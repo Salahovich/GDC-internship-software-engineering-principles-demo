@@ -29,6 +29,9 @@
       <module fileurl="file://$PROJECT_DIR$/23-chain-of-responsibility-pattern/order-validation-chain/order-validation-chain.iml" filepath="$PROJECT_DIR$/23-chain-of-responsibility-pattern/order-validation-chain/order-validation-chain.iml" />
       <module fileurl="file://$PROJECT_DIR$/24-observer-pattern/order-confirmation-events/order-confirmation-events.iml" filepath="$PROJECT_DIR$/24-observer-pattern/order-confirmation-events/order-confirmation-events.iml" />
       <module fileurl="file://$PROJECT_DIR$/25-visitor-pattern/order-item-pricing/order-item-pricing.iml" filepath="$PROJECT_DIR$/25-visitor-pattern/order-item-pricing/order-item-pricing.iml" />
+          <module fileurl="file://$PROJECT_DIR$/26-java-coding-standards/readability-guidelines/readability-guidelines.iml" filepath="$PROJECT_DIR$/26-java-coding-standards/readability-guidelines/readability-guidelines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/26-java-coding-standards/defensive-code-guidelines/defensive-code-guidelines.iml" filepath="$PROJECT_DIR$/26-java-coding-standards/defensive-code-guidelines/defensive-code-guidelines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/26-java-coding-standards/modern-java-guidelines/modern-java-guidelines.iml" filepath="$PROJECT_DIR$/26-java-coding-standards/modern-java-guidelines/modern-java-guidelines.iml" />
     </modules>
   </component>
 </project>

@@ -68,3 +68,4 @@ cd <NN-session>/<demo-name>
 23. [`23-chain-of-responsibility-pattern/`](23-chain-of-responsibility-pattern/README.md) — Design Pattern: Chain of Responsibility — order validation chain
 24. [`24-observer-pattern/`](24-observer-pattern/README.md) — Design Pattern: Observer — order confirmation events
 25. [`25-visitor-pattern/`](25-visitor-pattern/README.md) — Design Pattern: Visitor — order item pricing
+26. [`26-java-coding-standards/`](26-java-coding-standards/README.md) — Java Coding Standards: readability, defensive code, modern Java idioms (3 demos)
