@@ -11,6 +11,6 @@ slides as a set of quick BEFORE/AFTER snippets — three related
 guidelines bundled into each demo instead of nine separate ones, since
 each guideline on its own is a small, self-contained rule rather than a
 principle that needs its own walkthrough. Same `example/`/`exercise/`
-package layout as the design-pattern demos (17-25).
+package layout as the design-pattern demos (18-26).
 
 Requires JDK 21+.

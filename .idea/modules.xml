@@ -20,18 +20,18 @@
       <module fileurl="file://$PROJECT_DIR$/14-solid-lsp/discount-policies/discount-policies.iml" filepath="$PROJECT_DIR$/14-solid-lsp/discount-policies/discount-policies.iml" />
       <module fileurl="file://$PROJECT_DIR$/15-solid-isp/order-processor-interfaces/order-processor-interfaces.iml" filepath="$PROJECT_DIR$/15-solid-isp/order-processor-interfaces/order-processor-interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/16-solid-dip/order-notifications/order-notifications.iml" filepath="$PROJECT_DIR$/16-solid-dip/order-notifications/order-notifications.iml" />
-      <module fileurl="file://$PROJECT_DIR$/17-singleton-pattern/store-config/store-config.iml" filepath="$PROJECT_DIR$/17-singleton-pattern/store-config/store-config.iml" />
-      <module fileurl="file://$PROJECT_DIR$/18-builder-pattern/order-builder/order-builder.iml" filepath="$PROJECT_DIR$/18-builder-pattern/order-builder/order-builder.iml" />
-      <module fileurl="file://$PROJECT_DIR$/19-prototype-pattern/order-template/order-template.iml" filepath="$PROJECT_DIR$/19-prototype-pattern/order-template/order-template.iml" />
-      <module fileurl="file://$PROJECT_DIR$/20-adapter-pattern/payment-adapter/payment-adapter.iml" filepath="$PROJECT_DIR$/20-adapter-pattern/payment-adapter/payment-adapter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/21-facade-pattern/checkout-facade/checkout-facade.iml" filepath="$PROJECT_DIR$/21-facade-pattern/checkout-facade/checkout-facade.iml" />
-      <module fileurl="file://$PROJECT_DIR$/22-proxy-pattern/inventory-proxy/inventory-proxy.iml" filepath="$PROJECT_DIR$/22-proxy-pattern/inventory-proxy/inventory-proxy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/23-chain-of-responsibility-pattern/order-validation-chain/order-validation-chain.iml" filepath="$PROJECT_DIR$/23-chain-of-responsibility-pattern/order-validation-chain/order-validation-chain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/24-observer-pattern/order-confirmation-events/order-confirmation-events.iml" filepath="$PROJECT_DIR$/24-observer-pattern/order-confirmation-events/order-confirmation-events.iml" />
-      <module fileurl="file://$PROJECT_DIR$/25-visitor-pattern/order-item-pricing/order-item-pricing.iml" filepath="$PROJECT_DIR$/25-visitor-pattern/order-item-pricing/order-item-pricing.iml" />
-          <module fileurl="file://$PROJECT_DIR$/26-java-coding-standards/readability-guidelines/readability-guidelines.iml" filepath="$PROJECT_DIR$/26-java-coding-standards/readability-guidelines/readability-guidelines.iml" />
-      <module fileurl="file://$PROJECT_DIR$/26-java-coding-standards/defensive-code-guidelines/defensive-code-guidelines.iml" filepath="$PROJECT_DIR$/26-java-coding-standards/defensive-code-guidelines/defensive-code-guidelines.iml" />
-      <module fileurl="file://$PROJECT_DIR$/26-java-coding-standards/modern-java-guidelines/modern-java-guidelines.iml" filepath="$PROJECT_DIR$/26-java-coding-standards/modern-java-guidelines/modern-java-guidelines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17-java-coding-standards/readability-guidelines/readability-guidelines.iml" filepath="$PROJECT_DIR$/17-java-coding-standards/readability-guidelines/readability-guidelines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17-java-coding-standards/defensive-code-guidelines/defensive-code-guidelines.iml" filepath="$PROJECT_DIR$/17-java-coding-standards/defensive-code-guidelines/defensive-code-guidelines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17-java-coding-standards/modern-java-guidelines/modern-java-guidelines.iml" filepath="$PROJECT_DIR$/17-java-coding-standards/modern-java-guidelines/modern-java-guidelines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/18-singleton-pattern/store-config/store-config.iml" filepath="$PROJECT_DIR$/18-singleton-pattern/store-config/store-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19-builder-pattern/order-builder/order-builder.iml" filepath="$PROJECT_DIR$/19-builder-pattern/order-builder/order-builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20-prototype-pattern/order-template/order-template.iml" filepath="$PROJECT_DIR$/20-prototype-pattern/order-template/order-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/21-adapter-pattern/payment-adapter/payment-adapter.iml" filepath="$PROJECT_DIR$/21-adapter-pattern/payment-adapter/payment-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/22-facade-pattern/checkout-facade/checkout-facade.iml" filepath="$PROJECT_DIR$/22-facade-pattern/checkout-facade/checkout-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/23-proxy-pattern/inventory-proxy/inventory-proxy.iml" filepath="$PROJECT_DIR$/23-proxy-pattern/inventory-proxy/inventory-proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/24-chain-of-responsibility-pattern/order-validation-chain/order-validation-chain.iml" filepath="$PROJECT_DIR$/24-chain-of-responsibility-pattern/order-validation-chain/order-validation-chain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/25-observer-pattern/order-confirmation-events/order-confirmation-events.iml" filepath="$PROJECT_DIR$/25-observer-pattern/order-confirmation-events/order-confirmation-events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/26-visitor-pattern/order-item-pricing/order-item-pricing.iml" filepath="$PROJECT_DIR$/26-visitor-pattern/order-item-pricing/order-item-pricing.iml" />
     </modules>
   </component>
 </project>

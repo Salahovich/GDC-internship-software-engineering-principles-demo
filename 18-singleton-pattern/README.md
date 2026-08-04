@@ -4,7 +4,7 @@
 |---|---|
 | [`store-config/`](store-config/README.md) | `cd store-config && ./run.sh` |
 
-First of nine design-pattern demos (17-25). Each demo is small and
+First of nine design-pattern demos (18-26). Each demo is small and
 standalone (2-3 core classes) so it can be walked through in about
 7-10 minutes. `src/` splits into an `example/` package (BEFORE, AFTER,
 and `main()`) and an `exercise/` package (the TODO) so the material

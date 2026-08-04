@@ -24,13 +24,14 @@ the same `Order`/`OrderItem` (and later `DiscountPolicy`) entity
 definitions, redeclared in each file, so the five read as one connected
 system rather than five unrelated snippets.
 
-The nine design-pattern demos (17-25) use a different file layout: each
-one splits its `src/` package into an `example/` sub-package (the BEFORE
-class, the AFTER class, and the runnable `main()`) and an `exercise/`
-sub-package (the standalone TODO exercise), so the pattern you're
-explaining and the exercise the intern does are never mixed together in
-the same folder. Each demo is also deliberately small — 2-3 core classes
-in `example/` — so it can be walked through in about 7-10 minutes.
+Session 17 (Java Coding Standards) and the nine design-pattern demos
+(18-26) use a different file layout: each one splits its `src/` package
+into an `example/` sub-package (the BEFORE class, the AFTER class, and
+the runnable `main()`) and an `exercise/` sub-package (the standalone
+TODO exercise), so the material you're presenting and the exercise the
+intern does are never mixed together in the same folder. Each demo is
+also deliberately small — 2-3 core classes in `example/` — so it can be
+walked through in about 7-10 minutes.
 
 ## Running a demo
 
@@ -59,13 +60,13 @@ cd <NN-session>/<demo-name>
 14. [`14-solid-lsp/`](14-solid-lsp/README.md) — SOLID (L): Liskov Substitution — discount policies
 15. [`15-solid-isp/`](15-solid-isp/README.md) — SOLID (I): Interface Segregation — order processor interfaces
 16. [`16-solid-dip/`](16-solid-dip/README.md) — SOLID (D): Dependency Inversion — order notifications
-17. [`17-singleton-pattern/`](17-singleton-pattern/README.md) — Design Pattern: Singleton — store config
-18. [`18-builder-pattern/`](18-builder-pattern/README.md) — Design Pattern: Builder — order builder
-19. [`19-prototype-pattern/`](19-prototype-pattern/README.md) — Design Pattern: Prototype — order template
-20. [`20-adapter-pattern/`](20-adapter-pattern/README.md) — Design Pattern: Adapter — payment adapter
-21. [`21-facade-pattern/`](21-facade-pattern/README.md) — Design Pattern: Facade — checkout facade
-22. [`22-proxy-pattern/`](22-proxy-pattern/README.md) — Design Pattern: Proxy — inventory proxy
-23. [`23-chain-of-responsibility-pattern/`](23-chain-of-responsibility-pattern/README.md) — Design Pattern: Chain of Responsibility — order validation chain
-24. [`24-observer-pattern/`](24-observer-pattern/README.md) — Design Pattern: Observer — order confirmation events
-25. [`25-visitor-pattern/`](25-visitor-pattern/README.md) — Design Pattern: Visitor — order item pricing
-26. [`26-java-coding-standards/`](26-java-coding-standards/README.md) — Java Coding Standards: readability, defensive code, modern Java idioms (3 demos)
+17. [`17-java-coding-standards/`](17-java-coding-standards/README.md) — Java Coding Standards: readability, defensive code, modern Java idioms (3 demos)
+18. [`18-singleton-pattern/`](18-singleton-pattern/README.md) — Design Pattern: Singleton — store config
+19. [`19-builder-pattern/`](19-builder-pattern/README.md) — Design Pattern: Builder — order builder
+20. [`20-prototype-pattern/`](20-prototype-pattern/README.md) — Design Pattern: Prototype — order template
+21. [`21-adapter-pattern/`](21-adapter-pattern/README.md) — Design Pattern: Adapter — payment adapter
+22. [`22-facade-pattern/`](22-facade-pattern/README.md) — Design Pattern: Facade — checkout facade
+23. [`23-proxy-pattern/`](23-proxy-pattern/README.md) — Design Pattern: Proxy — inventory proxy
+24. [`24-chain-of-responsibility-pattern/`](24-chain-of-responsibility-pattern/README.md) — Design Pattern: Chain of Responsibility — order validation chain
+25. [`25-observer-pattern/`](25-observer-pattern/README.md) — Design Pattern: Observer — order confirmation events
+26. [`26-visitor-pattern/`](26-visitor-pattern/README.md) — Design Pattern: Visitor — order item pricing
