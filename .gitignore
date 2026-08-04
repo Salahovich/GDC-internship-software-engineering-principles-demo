@@ -1,0 +1,11 @@
+# Build output
+out/
+*.class
+
+# IDE
+.idea/workspace.xml
+.idea/shelf/
+*.iws
+
+# OS
+.DS_Store
