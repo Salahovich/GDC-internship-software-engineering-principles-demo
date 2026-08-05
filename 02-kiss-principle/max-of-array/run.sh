@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/kissprinciple/maxofarray/KissDemo.java
-java -cp out kissprinciple.maxofarray.KissDemo
+javac --release 21 -d out src/kissprinciple/maxofarray/example/*.java src/kissprinciple/maxofarray/exercise/*.java
+java -cp out kissprinciple.maxofarray.example.KissDemo

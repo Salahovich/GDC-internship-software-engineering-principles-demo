@@ -1,6 +1,13 @@
 # Cohesion & Coupling — Store Operations
 
-**File:** `src/cohesionandcoupling/storeoperations/CohesionAndCouplingDemo.java`
+**Files:** `src/cohesionandcoupling/storeoperations/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `StoreManagerLowCohesion.java` | BEFORE — three unrelated jobs, one class |
+| `example/` | `InventoryManager.java`, `PayrollCalculator.java`, `PromotionNotifier.java` | AFTER — one job each |
+| `example/` | `CohesionAndCouplingDemo.java` | `main()` — runs everything |
+| `exercise/` | `ReceiptPrinterLowCohesion.java` | TODO exercise — given low-cohesion class |
 
 ## What it shows
 
@@ -17,8 +24,8 @@ Running a store's inventory, payroll, and promotions, two ways.
 2. **AFTER (`InventoryManager`, `PayrollCalculator`,
    `PromotionNotifier`)** — three small, **highly cohesive** classes,
    each with one reason to change. `printStockReport()` depends on
-   `InventoryManager` alone — it was never coupled to payroll or email in
-   the first place.
+   `InventoryManager` alone — it was never coupled to payroll or email
+   in the first place.
 
 That's the relationship the demo is built to show: raising cohesion
 (splitting apart what shouldn't have been together) is usually exactly
@@ -32,45 +39,39 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`ReceiptPrinterLowCohesion` (bottom of the file, marked `TODO`) bundles
-two unrelated jobs: formatting a receipt line and tracking a running
-loyalty-points balance. A caller that only wants to format text is still
-forced to depend on the loyalty points store.
+`ReceiptPrinterLowCohesion` (see
+`exercise/ReceiptPrinterLowCohesion.java`) bundles two unrelated jobs:
+formatting a receipt line and tracking a running loyalty-points
+balance. A caller that only wants to format text is still forced to
+depend on the loyalty points store.
 
 **Task:** split it into `ReceiptFormatter.formatLine(itemName, price)`
 and `LoyaltyPointsTracker` (`addPoints(customerId, points)`,
-`getPoints(customerId)`). Update `main` to use the two new classes
-directly, then delete `ReceiptPrinterLowCohesion`.
+`getPoints(customerId)`) — each in its own file. Update
+`CohesionAndCouplingDemo.main` to use the two new classes directly,
+then delete `ReceiptPrinterLowCohesion`.
 
 <details>
 <summary>Solution</summary>
 
 ```java
-static class ReceiptFormatter {
-    String formatLine(String itemName, double price) {
+public class ReceiptFormatter {
+    public String formatLine(String itemName, double price) {
         return " - " + itemName + ": $" + price;
     }
 }
 
-static class LoyaltyPointsTracker {
+public class LoyaltyPointsTracker {
     private final Map<String, Integer> loyaltyPoints = new HashMap<>();
 
-    void addPoints(String customerId, int points) {
+    public void addPoints(String customerId, int points) {
         loyaltyPoints.merge(customerId, points, Integer::sum);
     }
 
-    int getPoints(String customerId) {
+    public int getPoints(String customerId) {
         return loyaltyPoints.getOrDefault(customerId, 0);
     }
 }
-
-// in main():
-ReceiptFormatter formatter = new ReceiptFormatter();
-System.out.println(formatter.formatLine("Keyboard", 60.0));
-
-LoyaltyPointsTracker points = new LoyaltyPointsTracker();
-points.addPoints("amina", 6);
-System.out.println("Amina's points: " + points.getPoints("amina"));
 ```
 
 </details>

@@ -1,18 +1,26 @@
 # KISS — Get Max of Array
 
-**File:** `src/kissprinciple/maxofarray/KissDemo.java`
+**Files:** `src/kissprinciple/maxofarray/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `GetMaxComplex.java` | BEFORE — box, validate 4x, sort O(n log n) |
+| `example/` | `GetMax.java` | AFTER — one pass, O(n) |
+| `example/` | `KissDemo.java` | `main()` — runs everything |
+| `exercise/` | `GetMinComplex.java` | TODO exercise — given over-engineered code |
 
 ## What it shows
 
 Finding the maximum value in an int array, two ways.
 
-1. **BEFORE (`getMaxComplex`)** — boxes the array into a `List<Integer>`,
-   validates "not null / not empty" four separate times (once for the
-   array, once for the boxed list, once again after sorting...), then
-   sorts the **entire** array (O(n log n)) just to read off the last
-   element.
-2. **AFTER (`getMax`)** — one validation, one pass over the array, O(n).
-   Same result, a fraction of the code, easier to trust at a glance.
+1. **BEFORE (`GetMaxComplex.getMaxComplex`)** — boxes the array into a
+   `List<Integer>`, validates "not null / not empty" four separate
+   times (once for the array, once for the boxed list, once again after
+   sorting...), then sorts the **entire** array (O(n log n)) just to
+   read off the last element.
+2. **AFTER (`GetMax.getMax`)** — one validation, one pass over the
+   array, O(n). Same result, a fraction of the code, easier to trust at
+   a glance.
 
 Run it:
 
@@ -22,13 +30,14 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`getMinComplex` (bottom of the file, marked `TODO`) has the exact same
-problem as `getMaxComplex` did — box to a `List`, validate repeatedly,
-sort the whole array — just to read off the *first* element this time.
+`GetMinComplex.getMinComplex` (see `exercise/GetMinComplex.java`) has
+the exact same problem `GetMaxComplex` did — box to a `List`, validate
+repeatedly, sort the whole array — just to read off the *first* element
+this time.
 
-**Task:** simplify it to a plain single-pass loop, the same way `getMax`
-simplified `getMaxComplex`, and update the call in `main` to use your
-version.
+**Task:** simplify it to a plain single-pass loop, the same way `GetMax`
+simplified `GetMaxComplex`, and update the call in `KissDemo.main` to
+use your version.
 
 <details>
 <summary>Solution</summary>

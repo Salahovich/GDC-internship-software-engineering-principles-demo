@@ -12,26 +12,26 @@ folder per demo:
 ```
 <NN-session>/
   <demo-name>/
-    src/.../<DemoName>.java   # one file, one public class, its own main()
-    run.sh                    # compiles to ./out and runs it
-    README.md                 # what it shows + the 5-minute exercise
+    src/.../example/   # BEFORE class(es), AFTER class(es), the runnable main()
+    src/.../exercise/  # the standalone TODO exercise
+    run.sh             # compiles to ./out and runs it
+    README.md          # what it shows + the 5-minute exercise
 ```
+
+Every demo splits its `src/` package into an `example/` sub-package (the
+BEFORE class, the AFTER class, and the runnable `main()`) and an
+`exercise/` sub-package (the TODO exercise), so the material you're
+presenting and the exercise the intern does are never mixed together in
+the same file. BEFORE and AFTER are always separate top-level files too
+— you can diff them side by side instead of scrolling one file looking
+for both halves.
 
 Each demo is self-contained and runnable on its own — no shared classpath
 across demos. The five SOLID demos (12-16) are the one exception: they're
 still separate, independently runnable modules, but intentionally reuse
 the same `Order`/`OrderItem` (and later `DiscountPolicy`) entity
-definitions, redeclared in each file, so the five read as one connected
+definitions, redeclared in each one, so the five read as one connected
 system rather than five unrelated snippets.
-
-Session 17 (Java Coding Standards) and the nine design-pattern demos
-(18-26) use a different file layout: each one splits its `src/` package
-into an `example/` sub-package (the BEFORE class, the AFTER class, and
-the runnable `main()`) and an `exercise/` sub-package (the standalone
-TODO exercise), so the material you're presenting and the exercise the
-intern does are never mixed together in the same folder. Each demo is
-also deliberately small — 2-3 core classes in `example/` — so it can be
-walked through in about 7-10 minutes.
 
 ## Running a demo
 

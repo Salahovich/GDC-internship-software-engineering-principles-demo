@@ -1,20 +1,27 @@
 # Anemic vs. Rich Domain Model — Order Domain Model
 
-**File:** `src/anemicvsrich/orderdomainmodel/AnemicVsRichDemo.java`
+**Files:** `src/anemicvsrich/orderdomainmodel/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `OrderAnemic.java` | BEFORE — bag of fields + external service owning the rule |
+| `example/` | `Order.java` | AFTER — rich object, no setter to bypass |
+| `example/` | `AnemicVsRichDemo.java` | `main()` — runs everything |
+| `exercise/` | `AccountAnemic.java` | TODO exercise — given anemic class + service |
 
 ## What it shows
 
 Building an order's total, two ways.
 
-1. **BEFORE (`OrderAnemic` + `OrderServiceAnemic`)** — `OrderAnemic` is a
-   plain bag of fields. The discount rule (0-100%) lives entirely in
-   `OrderServiceAnemic`. That works as long as everyone goes through the
-   service — but `OrderAnemic.setDiscountPercent()` is still public, so
-   any other code can call it directly, skip the rule entirely, and set
-   a nonsensical 500% discount.
-2. **AFTER (`Order`)** — the rule lives inside `applyDiscount()`. There's
-   no `setDiscountPercent()` to bypass at all — the only door in is the
-   one that checks the rule.
+1. **BEFORE (`OrderAnemic` + `OrderAnemic.OrderServiceAnemic`)** —
+   `OrderAnemic` is a plain bag of fields. The discount rule (0-100%)
+   lives entirely in `OrderServiceAnemic`. That works as long as
+   everyone goes through the service — but `OrderAnemic.setDiscountPercent()`
+   is still public, so any other code can call it directly, skip the
+   rule entirely, and set a nonsensical 500% discount.
+2. **AFTER (`Order`)** — the rule lives inside `applyDiscount()`.
+   There's no `setDiscountPercent()` to bypass at all — the only door
+   in is the one that checks the rule.
 
 Run it:
 
@@ -24,32 +31,33 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`AccountAnemic` / `AccountServiceAnemic` (bottom of the file, marked
-`TODO`) has the same problem: the "can't overdraw" rule lives in the
-service, but `setBalance()` is public and bypasses it.
+`AccountAnemic` / `AccountAnemic.AccountServiceAnemic` (see
+`exercise/AccountAnemic.java`) has the same problem: the "can't
+overdraw" rule lives in the service, but `setBalance()` is public and
+bypasses it.
 
-**Task:** create a rich `Account` class with a private balance and a
-`withdraw(double amount)` method that checks the balance and throws
-`IllegalStateException` if it's too large — no public setter. Update
-`main` to call `account.withdraw(amount)` directly, then delete
-`AccountAnemic` and `AccountServiceAnemic`.
+**Task:** create a rich `Account` class (in its own file) with a
+private balance and a `withdraw(double amount)` method that checks the
+balance and throws `IllegalStateException` if it's too large — no
+public setter. Update `AnemicVsRichDemo.main` to call
+`account.withdraw(amount)` directly, then delete `AccountAnemic`.
 
 <details>
 <summary>Solution</summary>
 
 ```java
-static class Account {
+public class Account {
     private double balance;
 
-    Account(double balance) {
+    public Account(double balance) {
         this.balance = balance;
     }
 
-    double getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    void withdraw(double amount) {
+    public void withdraw(double amount) {
         if (amount > balance) {
             throw new IllegalStateException("insufficient balance");
         }

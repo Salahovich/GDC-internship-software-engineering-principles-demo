@@ -1,12 +1,22 @@
 # SOLID (I) — Order Processor Interfaces
 
-**File:** `src/solidisp/orderprocessorinterfaces/IspDemo.java`
+**Files:** `src/solidisp/orderprocessorinterfaces/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `OrderItem.java`, `Order.java` | Shared entities |
+| `example/` | `OrderProcessorFat.java` | BEFORE — one fat interface + `SimpleReceiptPrinter` |
+| `example/` | `OrderProcessorRoles.java` | AFTER — `TotalCalculable`/`Printable`/`Notifiable`/`Refundable` |
+| `example/` | `ReceiptPrinter.java` | AFTER — implements only `Printable` |
+| `example/` | `FullServiceOrderProcessor.java` | AFTER — implements all four when it genuinely needs to |
+| `example/` | `IspDemo.java` | `main()` — runs everything |
+| `exercise/` | `SupportDashboardView.java` | TODO exercise — given fat-interface class + `CustomerAccountManagerFat` |
 
 ## What it shows
 
 Defining what an "order processor" can do, two ways.
 
-1. **BEFORE (`OrderProcessor`)** — one fat interface with
+1. **BEFORE (`OrderProcessorFat`)** — one fat interface with
    `calculateTotal`, `printInvoice`, `sendConfirmation`, and `refund`.
    `SimpleReceiptPrinter` only wants to print receipts, but is forced to
    implement the other three anyway — with nothing sensible to do but
@@ -25,35 +35,35 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`CustomerAccountManager` (bottom of the file, marked `TODO`) has the
-same problem: `SupportDashboardView` only wants to look up order
+`CustomerAccountManagerFat` (see `exercise/SupportDashboardView.java`)
+has the same problem: `SupportDashboardView` only wants to look up order
 history, but is forced to implement `updateProfile()` and
 `deleteAccount()` too.
 
-**Task:** split `CustomerAccountManager` into `ProfileEditable`
+**Task:** split `CustomerAccountManagerFat` into `ProfileEditable`
 (`updateProfile`), `OrderHistoryViewable` (`viewOrderHistory`), and
 `AccountDeletable` (`deleteAccount`). Make a new
 `ReadOnlySupportDashboard` implement only `OrderHistoryViewable`. Update
-`main` to use it, then delete `SupportDashboardView` and
-`CustomerAccountManager`.
+`IspDemo.main` to use it, then delete `SupportDashboardView` and
+`CustomerAccountManagerFat`.
 
 <details>
 <summary>Solution</summary>
 
 ```java
-interface ProfileEditable {
+public interface ProfileEditable {
     void updateProfile(String customerEmail, String newName);
 }
 
-interface OrderHistoryViewable {
+public interface OrderHistoryViewable {
     String viewOrderHistory(String customerEmail);
 }
 
-interface AccountDeletable {
+public interface AccountDeletable {
     void deleteAccount(String customerEmail);
 }
 
-static class ReadOnlySupportDashboard implements OrderHistoryViewable {
+public class ReadOnlySupportDashboard implements OrderHistoryViewable {
     public String viewOrderHistory(String customerEmail) {
         return "3 past orders for " + customerEmail;
     }

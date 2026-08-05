@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/lawofdemeter/shippinglabel/LawOfDemeterDemo.java
-java -cp out lawofdemeter.shippinglabel.LawOfDemeterDemo
+javac --release 21 -d out src/lawofdemeter/shippinglabel/example/*.java src/lawofdemeter/shippinglabel/exercise/*.java
+java -cp out lawofdemeter.shippinglabel.example.LawOfDemeterDemo

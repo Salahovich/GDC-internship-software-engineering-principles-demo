@@ -4,9 +4,13 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `ExceptionHandlingExamples.java` | Exceptions — BEFORE/AFTER |
-| `example/` | `OptionalExamples.java` | Optional — BEFORE/AFTER |
-| `example/` | `EqualsHashCodeExamples.java` | Equals & hashCode — BEFORE/AFTER |
+| `example/` | `ExceptionSwallowed.java` | Exceptions — BEFORE (swallows and returns `0`) |
+| `example/` | `ExceptionWrapped.java` | Exceptions — AFTER (rethrows with context) |
+| `example/` | `Fee.java` | Shared entity |
+| `example/` | `FeeLookupNullBefore.java` | Optional — BEFORE (returns `null`) |
+| `example/` | `FeeLookupOptionalAfter.java` | Optional — AFTER (returns `Optional<Fee>`) |
+| `example/` | `OrderIdBroken.java` | Equals & hashCode — BEFORE (`equals` without `hashCode`) |
+| `example/` | `OrderId.java` | Equals & hashCode — AFTER (both together) |
 | `example/` | `DefensiveCodeGuidelinesDemo.java` | `main()` — runs everything |
 | `exercise/` | `SkuCodeHashCodeTodo.java` | TODO exercise instructions |
 
@@ -15,15 +19,16 @@
 Three small, related rules about writing code that fails loudly and
 correctly instead of quietly and wrong.
 
-1. **Exceptions** — `parseAmountSwallowed("abc")` catches the error and
-   returns `0`, indistinguishable from a real zero amount. `parseAmount("abc")`
-   catches the same error and rethrows it wrapped with context — the
-   failure is still visible.
-2. **Optional** — `findFeeOrNullBefore(...)` returns `null` for "not
-   found," and calling `.amount()` on it throws a `NullPointerException`
-   with no warning at the call site. `findFeeAfter(...)` returns
-   `Optional<Fee>`, so absence is part of the method's signature and
-   `.map(...).orElse(...)` handles it explicitly.
+1. **Exceptions** — `ExceptionSwallowed.parseAmountSwallowed("abc")`
+   catches the error and returns `0`, indistinguishable from a real zero
+   amount. `ExceptionWrapped.parseAmount("abc")` catches the same error
+   and rethrows it wrapped with context — the failure is still visible.
+2. **Optional** — `FeeLookupNullBefore.findFeeOrNullBefore(...)` returns
+   `null` for "not found," and calling `.amount()` on it throws a
+   `NullPointerException` with no warning at the call site.
+   `FeeLookupOptionalAfter.findFeeAfter(...)` returns `Optional<Fee>`, so
+   absence is part of the method's signature and `.map(...).orElse(...)`
+   handles it explicitly.
 3. **Equals & hashCode** — `OrderIdBroken` overrides `equals()` but not
    `hashCode()`. Two "equal" instances land in different `HashSet`
    buckets, so `.contains(...)` returns `false` even though the objects

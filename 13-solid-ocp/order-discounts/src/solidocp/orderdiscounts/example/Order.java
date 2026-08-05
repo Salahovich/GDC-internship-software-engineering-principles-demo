@@ -1,0 +1,20 @@
+package solidocp.orderdiscounts.example;
+
+import java.util.List;
+
+/** Shared entity — same as the SRP demo. */
+public class Order {
+    private final String customerEmail;
+    private final List<OrderItem> items;
+
+    public Order(String customerEmail, List<OrderItem> items) {
+        this.customerEmail = customerEmail;
+        this.items = items;
+    }
+
+    public String getCustomerEmail() { return customerEmail; }
+
+    public double getSubtotal() {
+        return items.stream().mapToDouble(OrderItem::getLineTotal).sum();
+    }
+}

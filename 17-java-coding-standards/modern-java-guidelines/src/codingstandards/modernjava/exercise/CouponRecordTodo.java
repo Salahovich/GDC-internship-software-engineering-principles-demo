@@ -20,8 +20,8 @@ package codingstandards.modernjava.exercise;
  *
  * Task: write `Coupon` (in its own file, next to this one) as a record
  * with `code` and `discountPercent` components — the same shape as
- * `Money` in the example package. Records have no setters, so this bug
- * class can't happen.
+ * `MoneyRecordAfter` in the example package. Records have no setters, so
+ * this bug class can't happen.
  *
  * Then, in a small main(), create a Coupon, confirm there's no way to
  * change discountPercent after construction (no setter exists to call),

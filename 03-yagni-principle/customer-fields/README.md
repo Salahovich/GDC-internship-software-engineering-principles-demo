@@ -1,6 +1,13 @@
 # YAGNI — Extra Fields the Business Doesn't Need
 
-**File:** `src/yagniprinciple/customerfields/YagniDemo.java`
+**Files:** `src/yagniprinciple/customerfields/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `CustomerOverEngineered.java` | BEFORE — 5 speculative fields |
+| `example/` | `Customer.java` | AFTER — only what's needed, as a record |
+| `example/` | `YagniDemo.java` | `main()` — runs everything |
+| `exercise/` | `OrderOverEngineered.java` | TODO exercise — given over-engineered code |
 
 ## What it shows
 
@@ -24,14 +31,15 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`OrderOverEngineered` (bottom of the file, marked `TODO`) has the same
-problem: `estimatedCarbonFootprint`, `vipPriorityFlag`, and
+`OrderOverEngineered` (see `exercise/OrderOverEngineered.java`) has the
+same problem: `estimatedCarbonFootprint`, `vipPriorityFlag`, and
 `giftWrapNoteHistory` were added speculatively and are never read by
 `calculateTotal`, the only method that exists today.
 
-**Task:** create a trimmed-down `Order` (a record works well) with only
-`itemPrices` and `discountPercent`, write a `calculateTotal` that takes
-it, update `main` to use it, then delete `OrderOverEngineered`.
+**Task:** create a trimmed-down `Order` (a record works well, in its own
+file) with only `itemPrices` and `discountPercent`, write a
+`calculateTotal` that takes it, update `YagniDemo.main` to use it, then
+delete `OrderOverEngineered`.
 
 <details>
 <summary>Solution</summary>

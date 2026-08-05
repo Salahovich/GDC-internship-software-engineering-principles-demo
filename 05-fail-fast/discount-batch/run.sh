@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/failfast/discountbatch/FailFastDemo.java
-java -cp out failfast.discountbatch.FailFastDemo
+javac --release 21 -d out src/failfast/discountbatch/example/*.java src/failfast/discountbatch/exercise/*.java
+java -cp out failfast.discountbatch.example.FailFastDemo

@@ -4,9 +4,12 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `NamingExamples.java` | Naming — BEFORE/AFTER |
-| `example/` | `MethodSizeExamples.java` | Method size — BEFORE/AFTER |
-| `example/` | `MagicNumberExamples.java` | Magic numbers — BEFORE/AFTER |
+| `example/` | `NamingUnclear.java` | Naming — BEFORE (`process`) |
+| `example/` | `NamingClear.java` | Naming — AFTER (`hasExpired`) |
+| `example/` | `MethodSizeMonolithic.java` | Method size — BEFORE (one block) |
+| `example/` | `MethodSizeExtracted.java` | Method size — AFTER (named steps) |
+| `example/` | `MagicNumberBefore.java` | Magic numbers — BEFORE (`status == 1`) |
+| `example/` | `StatusEnumAfter.java` | Magic numbers — AFTER (`Status` enum) |
 | `example/` | `ReadabilityGuidelinesDemo.java` | `main()` — runs everything |
 | `exercise/` | `NullSafetyTodo.java` | TODO exercise instructions |
 

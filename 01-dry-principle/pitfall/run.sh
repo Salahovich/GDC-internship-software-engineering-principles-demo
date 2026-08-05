@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/dryprinciple/pitfall/DryPitfallDemo.java
-java -cp out dryprinciple.pitfall.DryPitfallDemo
+javac --release 21 -d out src/dryprinciple/pitfall/example/*.java src/dryprinciple/pitfall/exercise/*.java
+java -cp out dryprinciple.pitfall.example.DryPitfallDemo

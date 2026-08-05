@@ -1,19 +1,27 @@
 # Tell, Don't Ask — Inventory Reservation
 
-**File:** `src/telldontask/inventoryreservation/TellDontAskDemo.java`
+**Files:** `src/telldontask/inventoryreservation/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `InventoryItemAsk.java` | BEFORE — plain getter/setter, rule lives outside |
+| `example/` | `InventoryItem.java` | AFTER — rule enforced inside `reserve()` |
+| `example/` | `TellDontAskDemo.java` | `main()` — runs everything |
+| `exercise/` | `GiftCardAsk.java` | TODO exercise — given ask-style code |
 
 ## What it shows
 
 Reserving stock for a checkout, two ways.
 
-1. **BEFORE (`InventoryItemAsk`)** — a plain getter/setter. `checkoutReserve`
-   asks for the stock, checks it, then sets a new value. A second call
-   site, `expressCheckoutReserve`, added later, asks and sets too — but
-   forgets the check, and stock silently goes negative. Nothing stopped
-   this, because the rule lived outside the object, not inside it.
+1. **BEFORE (`InventoryItemAsk`)** — a plain getter/setter.
+   `checkoutReserve` asks for the stock, checks it, then sets a new
+   value. A second call site, `expressCheckoutReserve`, added later,
+   asks and sets too — but forgets the check, and stock silently goes
+   negative. Nothing stopped this, because the rule lived outside the
+   object, not inside it.
 2. **AFTER (`InventoryItem`)** — stock is hidden behind `reserve(qty)`.
-   The rule ("never go negative") lives in exactly one place, inside the
-   object, and applies no matter how the method is called.
+   The rule ("never go negative") lives in exactly one place, inside
+   the object, and applies no matter how the method is called.
 
 Run it:
 
@@ -23,36 +31,25 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`GiftCardAsk` (bottom of the file, marked `TODO`) has the same problem:
+`GiftCardAsk` (see `exercise/GiftCardAsk.java`) has the same problem:
 `redeemGiftCardAsk` asks for the balance, checks it, then sets a new
 one — the "don't go negative" rule lives outside the card.
 
 **Task:** add a `redeem(double amount)` method to `GiftCardAsk` that
 checks the balance and subtracts internally, throwing
-`IllegalStateException` if the balance is too low. Update `main` to call
-`card.redeem(amount)` directly, then delete `redeemGiftCardAsk`.
+`IllegalStateException` if the balance is too low. Update
+`TellDontAskDemo.main` to call `card.redeem(amount)` directly, then
+delete `redeemGiftCardAsk`.
 
 <details>
 <summary>Solution</summary>
 
 ```java
-static class GiftCardAsk {
-    private double balance;
-
-    GiftCardAsk(double balance) {
-        this.balance = balance;
+public void redeem(double amount) {
+    if (amount > balance) {
+        throw new IllegalStateException("gift card balance too low for $" + amount);
     }
-
-    double getBalance() {
-        return balance;
-    }
-
-    void redeem(double amount) {
-        if (amount > balance) {
-            throw new IllegalStateException("gift card balance too low for $" + amount);
-        }
-        balance -= amount;
-    }
+    balance -= amount;
 }
 
 // in main():

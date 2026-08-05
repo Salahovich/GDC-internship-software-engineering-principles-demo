@@ -1,6 +1,15 @@
 # SOLID (D) — Order Notifications
 
-**File:** `src/soliddip/ordernotifications/DipDemo.java`
+**Files:** `src/soliddip/ordernotifications/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `OrderItem.java`, `Order.java` | Shared entities |
+| `example/` | `OrderNotifierDipViolation.java` | BEFORE — high-level policy constructs a concrete `EmailSender` |
+| `example/` | `NotificationChannel.java` | AFTER — interface + `EmailChannel`/`SmsChannel` |
+| `example/` | `OrderNotifier.java` | AFTER — depends only on `NotificationChannel` |
+| `example/` | `DipDemo.java` | `main()` — runs everything |
+| `exercise/` | `OrderRepositoryDipViolation.java` | TODO exercise — given class welded to `MySqlDatabase` |
 
 ## What it shows
 
@@ -25,31 +34,32 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`OrderRepositoryDipViolation` (bottom of the file, marked `TODO`) has the
-same problem: it directly constructs a concrete `MySqlDatabase`.
+`OrderRepositoryDipViolation` (see
+`exercise/OrderRepositoryDipViolation.java`) has the same problem: it
+directly constructs a concrete `MySqlDatabase`.
 
 **Task:** create a `Database` interface with `save(String data)`,
 implement `MySqlDatabase` and a second implementation `InMemoryDatabase`
 (stores strings in a `List`, handy for tests), and an `OrderRepository`
-that takes a `Database` in its constructor. Update `main` to build an
-`OrderRepository` with each implementation, then delete
+that takes a `Database` in its constructor. Update `DipDemo.main` to
+build an `OrderRepository` with each implementation, then delete
 `OrderRepositoryDipViolation`.
 
 <details>
 <summary>Solution</summary>
 
 ```java
-interface Database {
+public interface Database {
     void save(String data);
 }
 
-static class MySqlDatabaseImpl implements Database {
+public class MySqlDatabaseImpl implements Database {
     public void save(String data) {
         System.out.println("[MySQL] saved: " + data);
     }
 }
 
-static class InMemoryDatabase implements Database {
+public class InMemoryDatabase implements Database {
     private final List<String> records = new ArrayList<>();
 
     public void save(String data) {
@@ -58,14 +68,14 @@ static class InMemoryDatabase implements Database {
     }
 }
 
-static class OrderRepository {
+public class OrderRepository {
     private final Database database;
 
-    OrderRepository(Database database) {
+    public OrderRepository(Database database) {
         this.database = database;
     }
 
-    void save(Order order) {
+    public void save(Order order) {
         database.save("order for " + order.getCustomerEmail());
     }
 }

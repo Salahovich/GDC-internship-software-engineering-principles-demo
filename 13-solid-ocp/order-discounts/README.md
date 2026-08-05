@@ -1,6 +1,15 @@
 # SOLID (O) — Order Discounts
 
-**File:** `src/solidocp/orderdiscounts/OcpDemo.java`
+**Files:** `src/solidocp/orderdiscounts/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `OrderItem.java`, `Order.java` | Shared entities |
+| `example/` | `DiscountCalculatorOcpViolation.java` | BEFORE — `if/else` on customer type |
+| `example/` | `DiscountPolicy.java` | AFTER — interface + `RegularDiscount`/`VipDiscount`/`StudentDiscount` |
+| `example/` | `OrderTotalCalculator.java` | AFTER — never changes when a new type is added |
+| `example/` | `OcpDemo.java` | `main()` — runs everything |
+| `exercise/` | `ShippingCostCalculatorOcpViolation.java` | TODO exercise — given `if/else` region chain |
 
 ## What it shows
 
@@ -26,37 +35,37 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`ShippingCostCalculatorOcpViolation` (bottom of the file, marked `TODO`)
-has the same problem: adding a shipping region means editing its
-if/else chain.
+`ShippingCostCalculatorOcpViolation` (see
+`exercise/ShippingCostCalculatorOcpViolation.java`) has the same
+problem: adding a shipping region means editing its if/else chain.
 
-**Task:** create a `ShippingPolicy` interface with `getFlatRate()`,
-implement `LocalShipping` ($3), `NationalShipping` ($7), and
-`InternationalShipping` ($20), and a `ShippingCostCalculator` that takes
-a `ShippingPolicy`. Update `main` to use it, then delete
+**Task:** create a `ShippingPolicy` interface with `getFlatRate()` (in
+its own file), implement `LocalShipping` ($3), `NationalShipping` ($7),
+and `InternationalShipping` ($20), and a `ShippingCostCalculator` that
+takes a `ShippingPolicy`. Update `OcpDemo.main` to use it, then delete
 `ShippingCostCalculatorOcpViolation`.
 
 <details>
 <summary>Solution</summary>
 
 ```java
-interface ShippingPolicy {
+public interface ShippingPolicy {
     double getFlatRate();
 }
 
-static class LocalShipping implements ShippingPolicy {
+public class LocalShipping implements ShippingPolicy {
     public double getFlatRate() { return 3.0; }
 }
 
-static class NationalShipping implements ShippingPolicy {
+public class NationalShipping implements ShippingPolicy {
     public double getFlatRate() { return 7.0; }
 }
 
-static class InternationalShipping implements ShippingPolicy {
+public class InternationalShipping implements ShippingPolicy {
     public double getFlatRate() { return 20.0; }
 }
 
-static class ShippingCostCalculator {
+public class ShippingCostCalculator {
     double calculateShipping(ShippingPolicy policy) {
         return policy.getFlatRate();
     }

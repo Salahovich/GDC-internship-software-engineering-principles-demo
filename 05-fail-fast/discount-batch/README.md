@@ -1,18 +1,26 @@
 # Fail Fast — Discount Batch
 
-**File:** `src/failfast/discountbatch/FailFastDemo.java`
+**Files:** `src/failfast/discountbatch/`
+
+| Package | File | Role |
+|---|---|---|
+| `example/` | `Order.java` | Shared entity |
+| `example/` | `DiscountBatchLate.java` | BEFORE — no upfront validation |
+| `example/` | `DiscountBatch.java` | AFTER — validates once, before touching any order |
+| `example/` | `FailFastDemo.java` | `main()` — runs everything |
+| `exercise/` | `ShippingRateLate.java` | TODO exercise — given unvalidated code |
 
 ## What it shows
 
 Applying a discount to a batch of orders, two ways.
 
-1. **BEFORE (`applyDiscountBatchLate`)** — no upfront check on the
-   discount. Pass in `150` (a nonsensical 150% discount) and it silently
-   produces a negative price for every order in the batch — no error,
-   no warning, just wrong numbers.
-2. **AFTER (`applyDiscountBatch`)** — validates the discount once, before
-   touching a single order, and throws immediately with a message that
-   points straight at the problem.
+1. **BEFORE (`DiscountBatchLate.applyDiscountBatchLate`)** — no upfront
+   check on the discount. Pass in `150` (a nonsensical 150% discount)
+   and it silently produces a negative price for every order in the
+   batch — no error, no warning, just wrong numbers.
+2. **AFTER (`DiscountBatch.applyDiscountBatch`)** — validates the
+   discount once, before touching a single order, and throws
+   immediately with a message that points straight at the problem.
 
 Run it:
 
@@ -22,14 +30,15 @@ Run it:
 
 ## Exercise (~5 minutes)
 
-`applyShippingRateLate` (bottom of the file, marked `TODO`) has the same
-problem: a negative shipping rate isn't checked anywhere and silently
-produces a negative shipping charge for every order.
+`ShippingRateLate.applyShippingRateLate` (see
+`exercise/ShippingRateLate.java`) has the same problem: a negative
+shipping rate isn't checked anywhere and silently produces a negative
+shipping charge for every order.
 
 **Task:** write `validateShippingRate(double ratePerOrder)` (throws
 `IllegalArgumentException` if negative) and `applyShippingRate(orders,
-ratePerOrder)` that validates first, then loops. Update `main` to call
-it, then delete `applyShippingRateLate`.
+ratePerOrder)` that validates first, then loops. Update
+`FailFastDemo.main` to call it, then delete `ShippingRateLate`.
 
 <details>
 <summary>Solution</summary>
