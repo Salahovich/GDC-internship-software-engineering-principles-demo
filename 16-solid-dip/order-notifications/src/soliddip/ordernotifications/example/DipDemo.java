@@ -1,5 +1,7 @@
 package soliddip.ordernotifications.example;
 
+import soliddip.ordernotifications.before.OrderNotifierDipViolation;
+
 import soliddip.ordernotifications.exercise.OrderRepositoryDipViolation;
 
 import java.util.List;

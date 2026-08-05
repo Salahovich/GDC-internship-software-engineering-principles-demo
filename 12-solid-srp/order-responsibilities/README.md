@@ -5,7 +5,7 @@
 | Package | File | Role |
 |---|---|---|
 | `example/` | `OrderItem.java`, `Order.java` | Shared entities |
-| `example/` | `OrderManagerSrpViolation.java` | BEFORE — four reasons to change, one class |
+| `before/` | `OrderManagerSrpViolation.java` | BEFORE — four reasons to change, one class |
 | `example/` | `OrderCalculator.java`, `InvoicePrinter.java`, `OrderRepository.java`, `OrderNotifier.java` | AFTER — one reason each |
 | `example/` | `OrderCheckout.java` | AFTER — orchestrates the four pieces |
 | `example/` | `SrpDemo.java` | `main()` — runs everything |

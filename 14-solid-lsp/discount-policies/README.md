@@ -6,7 +6,7 @@
 |---|---|---|
 | `example/` | `OrderItem.java`, `Order.java`, `DiscountPolicy.java` | Shared entities + interface (from 13-solid-ocp) |
 | `example/` | `OrderTotalCalculator.java`, `PrintSavings.java` | Helpers |
-| `example/` | `RushFeeAsDiscountPolicyBefore.java` | BEFORE — a surcharge disguised as a `DiscountPolicy` |
+| `before/` | `RushFeeAsDiscountPolicyBefore.java` | BEFORE — a surcharge disguised as a `DiscountPolicy` |
 | `example/` | `PriceAdjustment.java` | AFTER — interface + `DiscountAdjustment`/`RushFeeSurcharge` |
 | `example/` | `LspDemo.java` | `main()` — runs everything |
 | `exercise/` | `FreeShippingAsDiscountPolicy.java` | TODO exercise — given `DiscountPolicy` misuse |

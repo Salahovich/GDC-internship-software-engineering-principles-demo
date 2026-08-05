@@ -1,5 +1,7 @@
 package solidlsp.discountpolicies.example;
 
+import solidlsp.discountpolicies.before.RushFeeAsDiscountPolicyBefore;
+
 import solidlsp.discountpolicies.exercise.FreeShippingAsDiscountPolicy;
 
 import java.util.List;

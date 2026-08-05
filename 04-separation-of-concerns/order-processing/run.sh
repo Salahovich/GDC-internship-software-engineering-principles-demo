@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/separationofconcerns/orderprocessing/example/*.java src/separationofconcerns/orderprocessing/exercise/*.java
+javac --release 21 -d out src/separationofconcerns/orderprocessing/before/*.java src/separationofconcerns/orderprocessing/example/*.java src/separationofconcerns/orderprocessing/exercise/*.java
 java -cp out separationofconcerns.orderprocessing.example.SeparationOfConcernsDemo

@@ -1,5 +1,7 @@
 package solidisp.orderprocessorinterfaces.example;
 
+import solidisp.orderprocessorinterfaces.before.OrderProcessorFat;
+
 import solidisp.orderprocessorinterfaces.exercise.SupportDashboardView;
 
 import java.util.List;

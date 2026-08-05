@@ -4,7 +4,7 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `InventoryItemAsk.java` | BEFORE — plain getter/setter, rule lives outside |
+| `before/` | `InventoryItemAsk.java` | BEFORE — plain getter/setter, rule lives outside |
 | `example/` | `InventoryItem.java` | AFTER — rule enforced inside `reserve()` |
 | `example/` | `TellDontAskDemo.java` | `main()` — runs everything |
 | `exercise/` | `GiftCardAsk.java` | TODO exercise — given ask-style code |

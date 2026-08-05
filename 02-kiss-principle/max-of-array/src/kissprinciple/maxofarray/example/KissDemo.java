@@ -1,5 +1,7 @@
 package kissprinciple.maxofarray.example;
 
+import kissprinciple.maxofarray.before.GetMaxComplex;
+
 import kissprinciple.maxofarray.exercise.GetMinComplex;
 
 /**

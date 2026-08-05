@@ -1,5 +1,7 @@
 package solidocp.orderdiscounts.example;
 
+import solidocp.orderdiscounts.before.DiscountCalculatorOcpViolation;
+
 import solidocp.orderdiscounts.exercise.ShippingCostCalculatorOcpViolation;
 
 import java.util.List;

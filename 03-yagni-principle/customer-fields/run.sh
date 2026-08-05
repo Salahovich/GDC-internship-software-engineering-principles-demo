@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/yagniprinciple/customerfields/example/*.java src/yagniprinciple/customerfields/exercise/*.java
+javac --release 21 -d out src/yagniprinciple/customerfields/before/*.java src/yagniprinciple/customerfields/example/*.java src/yagniprinciple/customerfields/exercise/*.java
 java -cp out yagniprinciple.customerfields.example.YagniDemo

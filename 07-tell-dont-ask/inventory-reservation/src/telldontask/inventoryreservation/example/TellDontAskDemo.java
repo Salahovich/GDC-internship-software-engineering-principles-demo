@@ -1,5 +1,7 @@
 package telldontask.inventoryreservation.example;
 
+import telldontask.inventoryreservation.before.InventoryItemAsk;
+
 import telldontask.inventoryreservation.exercise.GiftCardAsk;
 
 /**

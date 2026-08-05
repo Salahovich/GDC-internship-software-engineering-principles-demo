@@ -4,7 +4,7 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `OrderAnemic.java` | BEFORE — bag of fields + external service owning the rule |
+| `before/` | `OrderAnemic.java` | BEFORE — bag of fields + external service owning the rule |
 | `example/` | `Order.java` | AFTER — rich object, no setter to bypass |
 | `example/` | `AnemicVsRichDemo.java` | `main()` — runs everything |
 | `exercise/` | `AccountAnemic.java` | TODO exercise — given anemic class + service |

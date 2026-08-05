@@ -5,7 +5,7 @@
 | Package | File | Role |
 |---|---|---|
 | `example/` | `OrderItem.java`, `Order.java` | Shared entities |
-| `example/` | `DiscountCalculatorOcpViolation.java` | BEFORE — `if/else` on customer type |
+| `before/` | `DiscountCalculatorOcpViolation.java` | BEFORE — `if/else` on customer type |
 | `example/` | `DiscountPolicy.java` | AFTER — interface + `RegularDiscount`/`VipDiscount`/`StudentDiscount` |
 | `example/` | `OrderTotalCalculator.java` | AFTER — never changes when a new type is added |
 | `example/` | `OcpDemo.java` | `main()` — runs everything |

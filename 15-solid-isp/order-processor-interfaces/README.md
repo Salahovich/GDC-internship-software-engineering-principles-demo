@@ -5,7 +5,7 @@
 | Package | File | Role |
 |---|---|---|
 | `example/` | `OrderItem.java`, `Order.java` | Shared entities |
-| `example/` | `OrderProcessorFat.java` | BEFORE — one fat interface + `SimpleReceiptPrinter` |
+| `before/` | `OrderProcessorFat.java` | BEFORE — one fat interface + `SimpleReceiptPrinter` |
 | `example/` | `OrderProcessorRoles.java` | AFTER — `TotalCalculable`/`Printable`/`Notifiable`/`Refundable` |
 | `example/` | `ReceiptPrinter.java` | AFTER — implements only `Printable` |
 | `example/` | `FullServiceOrderProcessor.java` | AFTER — implements all four when it genuinely needs to |

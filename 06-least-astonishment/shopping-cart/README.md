@@ -4,7 +4,7 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `ShoppingCartSurprising.java` | BEFORE — "getter" mutates the cart |
+| `before/` | `ShoppingCartSurprising.java` | BEFORE — "getter" mutates the cart |
 | `example/` | `ShoppingCart.java` | AFTER — returns copies, cart untouched |
 | `example/` | `LeastAstonishmentDemo.java` | `main()` — runs everything |
 | `exercise/` | `EmailValidatorSurprising.java` | TODO exercise — given surprising predicate |

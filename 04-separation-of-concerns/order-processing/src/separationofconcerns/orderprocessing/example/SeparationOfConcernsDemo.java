@@ -1,5 +1,7 @@
 package separationofconcerns.orderprocessing.example;
 
+import separationofconcerns.orderprocessing.before.OrderProcessingTangled;
+
 import separationofconcerns.orderprocessing.exercise.RegisterUserTangled;
 
 import java.util.List;

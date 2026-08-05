@@ -12,19 +12,23 @@ folder per demo:
 ```
 <NN-session>/
   <demo-name>/
-    src/.../example/   # BEFORE class(es), AFTER class(es), the runnable main()
+    src/.../before/    # BEFORE class(es) only
+    src/.../example/   # AFTER class(es), shared entities, the runnable main()
     src/.../exercise/  # the standalone TODO exercise
     run.sh             # compiles to ./out and runs it
     README.md          # what it shows + the 5-minute exercise
 ```
 
-Every demo splits its `src/` package into an `example/` sub-package (the
-BEFORE class, the AFTER class, and the runnable `main()`) and an
-`exercise/` sub-package (the TODO exercise), so the material you're
-presenting and the exercise the intern does are never mixed together in
-the same file. BEFORE and AFTER are always separate top-level files too
-— you can diff them side by side instead of scrolling one file looking
-for both halves.
+Every demo splits its `src/` package into an `exercise/` sub-package
+(the TODO exercise) and, for the material being presented, keeps the
+BEFORE and AFTER code in separate top-level files so you can diff them
+side by side instead of scrolling one file looking for both halves.
+
+Sessions 1-17 go a step further and put BEFORE and AFTER in separate
+*packages*: `before/` holds only the BEFORE class(es); `example/` holds
+the AFTER class(es), any shared entities the BEFORE/AFTER code both
+need, and the runnable `main()`. Sessions 18-26 (the design patterns)
+keep BEFORE and AFTER as separate files within one `example/` package.
 
 Each demo is self-contained and runnable on its own — no shared classpath
 across demos. The five SOLID demos (12-16) are the one exception: they're
@@ -40,7 +44,8 @@ cd <NN-session>/<demo-name>
 ./run.sh
 ```
 
-(or manually: `javac --release 21 -d out src/.../example/*.java src/.../exercise/*.java && java -cp out <package>.example.<Class>`)
+(or manually, for sessions 1-17: `javac --release 21 -d out src/.../before/*.java src/.../example/*.java src/.../exercise/*.java && java -cp out <package>.example.<Class>`;
+for sessions 18-26: `javac --release 21 -d out src/.../example/*.java src/.../exercise/*.java && java -cp out <package>.example.<Class>`)
 
 ## Sessions
 

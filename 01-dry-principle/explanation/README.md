@@ -5,7 +5,7 @@
 | Package | File | Role |
 |---|---|---|
 | `example/` | `Product.java` | Shared entity |
-| `example/` | `DuplicatedPricing.java` | BEFORE — same two rules repeated 3x |
+| `before/` | `DuplicatedPricing.java` | BEFORE — same two rules repeated 3x |
 | `example/` | `UnifiedPricing.java` | AFTER — each rule lives once |
 | `example/` | `DryExplanationDemo.java` | `main()` — runs everything |
 | `exercise/` | `DuplicatedReceiptPrinters.java` | TODO exercise — given duplicated code |

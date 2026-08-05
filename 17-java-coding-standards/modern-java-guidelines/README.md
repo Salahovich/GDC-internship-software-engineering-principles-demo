@@ -4,11 +4,11 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `MoneyMutableBefore.java` | Immutability & records — BEFORE (has a setter) |
+| `before/` | `MoneyMutableBefore.java` | Immutability & records — BEFORE (has a setter) |
 | `example/` | `MoneyRecordAfter.java` | Immutability & records — AFTER (`record`, no setter) |
-| `example/` | `StreamsUnclear.java` | Streams & loops — BEFORE (side effect hidden in `.map()`) |
+| `before/` | `StreamsUnclear.java` | Streams & loops — BEFORE (side effect hidden in `.map()`) |
 | `example/` | `StreamsClear.java` | Streams & loops — AFTER (`map` → `filter` → `collect`) |
-| `example/` | `LoggingBad.java` | Logging — BEFORE (wrong level, no id, logs a token) |
+| `before/` | `LoggingBad.java` | Logging — BEFORE (wrong level, no id, logs a token) |
 | `example/` | `LoggingGood.java` | Logging — AFTER (`ERROR`, id included, nothing sensitive) |
 | `example/` | `ModernJavaGuidelinesDemo.java` | `main()` — runs everything |
 | `exercise/` | `CouponRecordTodo.java` | TODO exercise instructions |

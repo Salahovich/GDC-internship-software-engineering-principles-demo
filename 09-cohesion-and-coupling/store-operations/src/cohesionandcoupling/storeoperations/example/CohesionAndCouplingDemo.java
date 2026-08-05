@@ -1,5 +1,7 @@
 package cohesionandcoupling.storeoperations.example;
 
+import cohesionandcoupling.storeoperations.before.StoreManagerLowCohesion;
+
 import cohesionandcoupling.storeoperations.exercise.ReceiptPrinterLowCohesion;
 
 import java.util.Map;

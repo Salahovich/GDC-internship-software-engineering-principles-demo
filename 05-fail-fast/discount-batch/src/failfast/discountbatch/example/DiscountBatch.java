@@ -1,5 +1,7 @@
 package failfast.discountbatch.example;
 
+import failfast.discountbatch.before.DiscountBatchLate;
+
 import java.util.List;
 
 /**

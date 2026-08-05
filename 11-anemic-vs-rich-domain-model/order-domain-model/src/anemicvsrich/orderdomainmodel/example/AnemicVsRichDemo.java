@@ -1,5 +1,7 @@
 package anemicvsrich.orderdomainmodel.example;
 
+import anemicvsrich.orderdomainmodel.before.OrderAnemic;
+
 import anemicvsrich.orderdomainmodel.exercise.AccountAnemic;
 
 /**

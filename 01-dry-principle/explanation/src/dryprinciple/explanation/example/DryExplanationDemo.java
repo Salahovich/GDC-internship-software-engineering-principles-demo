@@ -1,5 +1,7 @@
 package dryprinciple.explanation.example;
 
+import dryprinciple.explanation.before.DuplicatedPricing;
+
 import dryprinciple.explanation.exercise.DuplicatedReceiptPrinters;
 
 /**

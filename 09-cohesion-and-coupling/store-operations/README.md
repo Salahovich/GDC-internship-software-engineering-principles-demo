@@ -4,7 +4,7 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `StoreManagerLowCohesion.java` | BEFORE — three unrelated jobs, one class |
+| `before/` | `StoreManagerLowCohesion.java` | BEFORE — three unrelated jobs, one class |
 | `example/` | `InventoryManager.java`, `PayrollCalculator.java`, `PromotionNotifier.java` | AFTER — one job each |
 | `example/` | `CohesionAndCouplingDemo.java` | `main()` — runs everything |
 | `exercise/` | `ReceiptPrinterLowCohesion.java` | TODO exercise — given low-cohesion class |

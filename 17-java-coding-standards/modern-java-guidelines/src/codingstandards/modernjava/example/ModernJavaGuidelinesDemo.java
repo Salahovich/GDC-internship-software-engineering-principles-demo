@@ -1,5 +1,9 @@
 package codingstandards.modernjava.example;
 
+import codingstandards.modernjava.before.MoneyMutableBefore;
+import codingstandards.modernjava.before.StreamsUnclear;
+import codingstandards.modernjava.before.LoggingBad;
+
 import java.util.List;
 
 /**

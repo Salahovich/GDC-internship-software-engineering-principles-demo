@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/codingstandards/defensivecode/example/*.java src/codingstandards/defensivecode/exercise/*.java
+javac --release 21 -d out src/codingstandards/defensivecode/before/*.java src/codingstandards/defensivecode/example/*.java src/codingstandards/defensivecode/exercise/*.java
 java -cp out codingstandards.defensivecode.example.DefensiveCodeGuidelinesDemo

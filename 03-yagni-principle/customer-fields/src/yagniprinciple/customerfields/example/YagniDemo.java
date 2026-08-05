@@ -1,5 +1,7 @@
 package yagniprinciple.customerfields.example;
 
+import yagniprinciple.customerfields.before.CustomerOverEngineered;
+
 import yagniprinciple.customerfields.exercise.OrderOverEngineered;
 
 /**

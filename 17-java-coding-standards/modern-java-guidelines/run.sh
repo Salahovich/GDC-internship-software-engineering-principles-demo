@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/codingstandards/modernjava/example/*.java src/codingstandards/modernjava/exercise/*.java
+javac --release 21 -d out src/codingstandards/modernjava/before/*.java src/codingstandards/modernjava/example/*.java src/codingstandards/modernjava/exercise/*.java
 java -cp out codingstandards.modernjava.example.ModernJavaGuidelinesDemo

@@ -4,7 +4,7 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `GetMaxComplex.java` | BEFORE — box, validate 4x, sort O(n log n) |
+| `before/` | `GetMaxComplex.java` | BEFORE — box, validate 4x, sort O(n log n) |
 | `example/` | `GetMax.java` | AFTER — one pass, O(n) |
 | `example/` | `KissDemo.java` | `main()` — runs everything |
 | `exercise/` | `GetMinComplex.java` | TODO exercise — given over-engineered code |

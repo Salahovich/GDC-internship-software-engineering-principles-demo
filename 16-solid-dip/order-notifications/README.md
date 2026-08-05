@@ -5,7 +5,7 @@
 | Package | File | Role |
 |---|---|---|
 | `example/` | `OrderItem.java`, `Order.java` | Shared entities |
-| `example/` | `OrderNotifierDipViolation.java` | BEFORE — high-level policy constructs a concrete `EmailSender` |
+| `before/` | `OrderNotifierDipViolation.java` | BEFORE — high-level policy constructs a concrete `EmailSender` |
 | `example/` | `NotificationChannel.java` | AFTER — interface + `EmailChannel`/`SmsChannel` |
 | `example/` | `OrderNotifier.java` | AFTER — depends only on `NotificationChannel` |
 | `example/` | `DipDemo.java` | `main()` — runs everything |

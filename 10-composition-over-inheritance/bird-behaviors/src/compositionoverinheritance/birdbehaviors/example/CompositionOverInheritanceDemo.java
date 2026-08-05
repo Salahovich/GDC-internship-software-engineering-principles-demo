@@ -1,5 +1,7 @@
 package compositionoverinheritance.birdbehaviors.example;
 
+import compositionoverinheritance.birdbehaviors.before.BirdInheritance;
+
 import compositionoverinheritance.birdbehaviors.exercise.VehicleInheritance;
 
 /**

@@ -1,5 +1,7 @@
 package lawofdemeter.shippinglabel.example;
 
+import lawofdemeter.shippinglabel.before.TrainWreck;
+
 import lawofdemeter.shippinglabel.exercise.WarehouseManagerTrainWreck;
 
 /**

@@ -1,5 +1,7 @@
 package dryprinciple.pitfall.example;
 
+import dryprinciple.pitfall.before.MergedFeeBefore;
+
 import dryprinciple.pitfall.exercise.ExtraChargeTangled;
 
 /**

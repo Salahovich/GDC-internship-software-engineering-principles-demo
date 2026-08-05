@@ -4,7 +4,7 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `CustomerOverEngineered.java` | BEFORE — 5 speculative fields |
+| `before/` | `CustomerOverEngineered.java` | BEFORE — 5 speculative fields |
 | `example/` | `Customer.java` | AFTER — only what's needed, as a record |
 | `example/` | `YagniDemo.java` | `main()` — runs everything |
 | `exercise/` | `OrderOverEngineered.java` | TODO exercise — given over-engineered code |

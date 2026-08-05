@@ -1,5 +1,9 @@
 package codingstandards.readability.example;
 
+import codingstandards.readability.before.NamingUnclear;
+import codingstandards.readability.before.MethodSizeMonolithic;
+import codingstandards.readability.before.MagicNumberBefore;
+
 import codingstandards.readability.exercise.NullSafetyTodo;
 
 /**

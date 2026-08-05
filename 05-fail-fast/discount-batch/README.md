@@ -5,7 +5,7 @@
 | Package | File | Role |
 |---|---|---|
 | `example/` | `Order.java` | Shared entity |
-| `example/` | `DiscountBatchLate.java` | BEFORE — no upfront validation |
+| `before/` | `DiscountBatchLate.java` | BEFORE — no upfront validation |
 | `example/` | `DiscountBatch.java` | AFTER — validates once, before touching any order |
 | `example/` | `FailFastDemo.java` | `main()` — runs everything |
 | `exercise/` | `ShippingRateLate.java` | TODO exercise — given unvalidated code |

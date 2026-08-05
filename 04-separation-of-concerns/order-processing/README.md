@@ -5,7 +5,7 @@
 | Package | File | Role |
 |---|---|---|
 | `example/` | `Item.java` | Shared entity |
-| `example/` | `OrderProcessingTangled.java` | BEFORE — all four concerns in one method |
+| `before/` | `OrderProcessingTangled.java` | BEFORE — all four concerns in one method |
 | `example/` | `OrderValidator.java`, `PriceCalculator.java`, `ReceiptFormatter.java`, `NotificationService.java` | AFTER — one concern each |
 | `example/` | `OrderProcessor.java` | AFTER — orchestrates the four pieces |
 | `example/` | `SeparationOfConcernsDemo.java` | `main()` — runs everything |

@@ -4,12 +4,12 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `ExceptionSwallowed.java` | Exceptions — BEFORE (swallows and returns `0`) |
+| `before/` | `ExceptionSwallowed.java` | Exceptions — BEFORE (swallows and returns `0`) |
 | `example/` | `ExceptionWrapped.java` | Exceptions — AFTER (rethrows with context) |
 | `example/` | `Fee.java` | Shared entity |
-| `example/` | `FeeLookupNullBefore.java` | Optional — BEFORE (returns `null`) |
+| `before/` | `FeeLookupNullBefore.java` | Optional — BEFORE (returns `null`) |
 | `example/` | `FeeLookupOptionalAfter.java` | Optional — AFTER (returns `Optional<Fee>`) |
-| `example/` | `OrderIdBroken.java` | Equals & hashCode — BEFORE (`equals` without `hashCode`) |
+| `before/` | `OrderIdBroken.java` | Equals & hashCode — BEFORE (`equals` without `hashCode`) |
 | `example/` | `OrderId.java` | Equals & hashCode — AFTER (both together) |
 | `example/` | `DefensiveCodeGuidelinesDemo.java` | `main()` — runs everything |
 | `exercise/` | `SkuCodeHashCodeTodo.java` | TODO exercise instructions |

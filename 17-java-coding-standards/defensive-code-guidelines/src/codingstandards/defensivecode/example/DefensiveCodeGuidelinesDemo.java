@@ -1,5 +1,9 @@
 package codingstandards.defensivecode.example;
 
+import codingstandards.defensivecode.before.ExceptionSwallowed;
+import codingstandards.defensivecode.before.FeeLookupNullBefore;
+import codingstandards.defensivecode.before.OrderIdBroken;
+
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;

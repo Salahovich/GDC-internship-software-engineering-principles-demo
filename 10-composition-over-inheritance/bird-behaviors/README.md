@@ -4,7 +4,7 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `BirdInheritance.java` | BEFORE — inheritance forces `fly()` on every subclass |
+| `before/` | `BirdInheritance.java` | BEFORE — inheritance forces `fly()` on every subclass |
 | `example/` | `FlyBehavior.java`, `SoundBehavior.java` | AFTER — small swappable behaviors |
 | `example/` | `Bird.java`, `Toy.java` | AFTER — composed types |
 | `example/` | `CompositionOverInheritanceDemo.java` | `main()` — runs everything |

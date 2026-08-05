@@ -1,5 +1,7 @@
 package leastastonishment.shoppingcart.example;
 
+import leastastonishment.shoppingcart.before.ShoppingCartSurprising;
+
 import leastastonishment.shoppingcart.exercise.EmailValidatorSurprising;
 
 /**

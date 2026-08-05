@@ -4,7 +4,7 @@
 
 | Package | File | Role |
 |---|---|---|
-| `example/` | `MergedFeeBefore.java` | BEFORE — two fees forced into one method |
+| `before/` | `MergedFeeBefore.java` | BEFORE — two fees forced into one method |
 | `example/` | `SplitFeeAfter.java` | AFTER — split back into independent methods |
 | `example/` | `DryPitfallDemo.java` | `main()` — runs everything |
 | `exercise/` | `ExtraChargeTangled.java` | TODO exercise — given tangled code |

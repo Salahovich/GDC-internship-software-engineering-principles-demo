@@ -18,7 +18,7 @@ package codingstandards.defensivecode.exercise;
  * SKUs have already been scanned today. Two SkuCode objects built from
  * the same string compare equal(), but `scannedToday.contains(...)`
  * still returns false for a SKU that was already added — same bug as
- * `OrderIdBroken` in the example package.
+ * `OrderIdBroken` in the before package.
  *
  * Task: add a `hashCode()` override to `SkuCode` (in its own file, next
  * to this one) that's consistent with `equals()` — same shape as

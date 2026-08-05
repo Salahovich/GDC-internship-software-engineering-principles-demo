@@ -5,7 +5,7 @@
 | Package | File | Role |
 |---|---|---|
 | `example/` | `Address.java` | Shared entity |
-| `example/` | `TrainWreck.java` | BEFORE — reaches through Order -> Customer -> Address |
+| `before/` | `TrainWreck.java` | BEFORE — reaches through Order -> Customer -> Address |
 | `example/` | `DemeterCompliant.java` | AFTER — each object talks to its immediate neighbor |
 | `example/` | `LawOfDemeterDemo.java` | `main()` — runs everything |
 | `exercise/` | `WarehouseManagerTrainWreck.java` | TODO exercise — given train-wreck chain |

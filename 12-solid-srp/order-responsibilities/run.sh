@@ -3,5 +3,5 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p out
-javac --release 21 -d out src/solidsrp/orderresponsibilities/example/*.java src/solidsrp/orderresponsibilities/exercise/*.java
+javac --release 21 -d out src/solidsrp/orderresponsibilities/before/*.java src/solidsrp/orderresponsibilities/example/*.java src/solidsrp/orderresponsibilities/exercise/*.java
 java -cp out solidsrp.orderresponsibilities.example.SrpDemo
