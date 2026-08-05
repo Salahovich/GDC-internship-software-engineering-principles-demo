@@ -1,4 +1,4 @@
-package designpatterns.prototype.ordertemplate.example;
+package designpatterns.prototype.ordertemplate.before;
 
 import java.util.List;
 
